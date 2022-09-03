@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(45, 45, 45);
+}
+$primary:rgb(84, 170, 8);
+$secondary:#FFAA01;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,700&display=swap');
+
+@import "reuseables";
+nav{
+    display:flex;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &>a{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        color:#fff;
+    }
+
+    ul{
+        display: flex;
+        gap: 1.7rem;
+
+        a{
+            text-decoration: none;
+            color: grey;
+            transition: all .4s;
+
+            &:hover{
+                color: $secondary;
+            }
+        }
+
+        &.links{
+            align-self: center;
+
+            a{
+                i{
+                    color: #fff !important;
+                    transition: all .4s;
+                    &:hover{
+                        color: $secondary !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.visible{
+        background: #fff;
+        box-shadow: 0 0.1rem .1rem rgba(0,0,0, .2);
+
+        &>a{
+            color: $secondary;
+        }
+
+        .links{
+            i{
+                color: grey !important;
+            }
+        }
+    }
+}
+
+#home{
+    background: linear-gradient(rgba(0,0,0, .2),rgba(0,0,0, .2)),url('../public/pizza.jpg');
+    // display: flex;
+    background-position: center;
+    background-size: cover;
+    padding-top: 1.5rem;
+    justify-content: space-evenly;
+    gap: 3rem;
+    height: 100vh;
+    position: relative;
+    padding: 0 3rem;
+
+    .homeimage{
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background: #fff2d7;
+        top: 0;
+        right: 0;
+        display: flex;
+       justify-content: center;
+       align-items: center;
+
+       .image{
+        width: 90%;
+        height: 500px;
+        
+       }
+    }
+
+    .intro{
+        padding-top: 13rem;
+        max-width: calc(60% - 5rem);
+
+        h3{
+            font-size: 1.7rem;
+            background: rgba(255, 255, 255, 0.448);
+            padding: .3rem;
+            // color: green;
+        }
+
+        h1{
+            font-size: 5.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+    }
+}
+
+#about{
+    .aboutflex{
+        display: flex;
+        gap: 0 3rem;
+        align-items: center;
+        padding-top: 3rem;
+        .aboutimage{
+            height: 370px;
+            width: 50%;
+
+            img{
+                transform: scale(.8);
+            }
+        }
+
+        .abouttext{
+            width: 50%;
+            font-size: 1.1rem; 
+
+            a{
+                margin-top: .5rem;
+                transform: scale(.8);
+                transform-origin: 0;
+            }
+
+            // color: grey;
+        }
+    }
+}
+
+
+#menu{
+    .menugrid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 0 .5rem;
+        padding-top: 3rem;
+
+        .menu{
+            margin-bottom: 2rem;
+            // background: red;
+            .image{
+                width: 100%;
+                height: 10rem;
+                background: radial-gradient(lighten($secondary,35),$secondary) ;
+            }
+
+            .details{
+                .name{
+                    color: $secondary;
+
+                }
+                .price{
+                    padding:.3rem 0;
+                }
+                .click{
+                    transform: scale(.8);
+                    transform-origin: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+#services{
+    .serviceflex{
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 3rem;
+
+        .service{
+            i{
+                text-align: center;
+                font-size: 4rem;
+                padding: .5rem ;
+                color: $primary;
+            }
+            .servicename{
+                font-size: .95rem;
+                color: $secondary;
+            }
+
+            .servicedetails{
+                font-size: .9rem;
+
+            }
+        }
+    }
+}
+
+#testimonials{
+    .testimonialflex{
+        display: flex;
+        gap: 0 2rem;
+        padding-top: 4rem;
+        justify-content: space-between;
+        transition: all .4s;
+        
+        .testimonial{
+            padding: 1rem;
+            width: 20rem;
+            background: lighten($secondary, 15);
+            border-radius: .4rem;
+            .info{
+                display: flex;
+                gap: 1rem;
+
+                .image{
+                    width: 4rem;
+                    height: 4rem;
+                    background: lightgray;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                .name{
+                    align-self: flex-end;
+                    padding-bottom: .7rem;
+                    color: #fff;
+                    
+                }
+            }
+
+            .comment{
+                font-size: .9rem;
+            }
+
+            &:hover{
+                box-shadow: 0 0 .5rem rgba(0,0,0, .2);
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    gap: 2rem;
+    padding: 4rem 2rem 5rem;
+    background: #fff2d7;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p{
+        max-width: 600px;
+    }
+
+    ul{
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            padding: .3rem;
+            text-decoration: none;
+        }
+    }
+}

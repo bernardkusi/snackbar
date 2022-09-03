@@ -1,13 +1,364 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;1,700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #2d2d2d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.click {
+  padding: .7rem 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  background: #FFAA01;
+  font-weight: 700;
+  border-radius: .4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor: pointer;
 }
+
+.click:hover {
+  background: #fff;
+  color: #FFAA01;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.38);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.38);
+}
+
+.center, .page {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page {
+  max-width: 1200px;
+  padding: 7rem 1rem 4rem;
+}
+
+.page .heading {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #FFAA01;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+nav > a {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.7rem;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: grey;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+nav ul a:hover {
+  color: #FFAA01;
+}
+
+nav ul.links {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+nav ul.links a i {
+  color: #fff !important;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+nav ul.links a i:hover {
+  color: #FFAA01 !important;
+}
+
+nav.visible {
+  background: #fff;
+  -webkit-box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+nav.visible > a {
+  color: #FFAA01;
+}
+
+nav.visible .links i {
+  color: grey !important;
+}
+
+#home {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../public/pizza.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/pizza.jpg");
+  background-position: center;
+  background-size: cover;
+  padding-top: 1.5rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 3rem;
+  height: 100vh;
+  position: relative;
+  padding: 0 3rem;
+}
+
+#home .homeimage {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: #fff2d7;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home .homeimage .image {
+  width: 90%;
+  height: 500px;
+}
+
+#home .intro {
+  padding-top: 13rem;
+  max-width: calc(60% - 5rem);
+}
+
+#home .intro h3 {
+  font-size: 1.7rem;
+  background: rgba(255, 255, 255, 0.448);
+  padding: .3rem;
+}
+
+#home .intro h1 {
+  font-size: 5.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#about .aboutflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+}
+
+#about .aboutflex .aboutimage {
+  height: 370px;
+  width: 50%;
+}
+
+#about .aboutflex .aboutimage img {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#about .aboutflex .abouttext {
+  width: 50%;
+  font-size: 1.1rem;
+}
+
+#about .aboutflex .abouttext a {
+  margin-top: .5rem;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+#menu .menugrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0 .5rem;
+  padding-top: 3rem;
+}
+
+#menu .menugrid .menu {
+  margin-bottom: 2rem;
+}
+
+#menu .menugrid .menu .image {
+  width: 100%;
+  height: 10rem;
+  background: radial-gradient(#ffe6b4, #FFAA01);
+}
+
+#menu .menugrid .menu .details .name {
+  color: #FFAA01;
+}
+
+#menu .menugrid .menu .details .price {
+  padding: .3rem 0;
+}
+
+#menu .menugrid .menu .details .click {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+#services .serviceflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+#services .serviceflex .service i {
+  text-align: center;
+  font-size: 4rem;
+  padding: .5rem;
+  color: #54aa08;
+}
+
+#services .serviceflex .service .servicename {
+  font-size: .95rem;
+  color: #FFAA01;
+}
+
+#services .serviceflex .service .servicedetails {
+  font-size: .9rem;
+}
+
+#testimonials .testimonialflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 2rem;
+  padding-top: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+#testimonials .testimonialflex .testimonial {
+  padding: 1rem;
+  width: 20rem;
+  background: #ffc44e;
+  border-radius: .4rem;
+}
+
+#testimonials .testimonialflex .testimonial .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+#testimonials .testimonialflex .testimonial .info .image {
+  width: 4rem;
+  height: 4rem;
+  background: lightgray;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#testimonials .testimonialflex .testimonial .info .name {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: .7rem;
+  color: #fff;
+}
+
+#testimonials .testimonialflex .testimonial .comment {
+  font-size: .9rem;
+}
+
+#testimonials .testimonialflex .testimonial:hover {
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem 5rem;
+  background: #fff2d7;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  max-width: 600px;
+}
+
+footer ul {
+  padding: 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer ul a {
+  padding: .3rem;
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.css.map */
