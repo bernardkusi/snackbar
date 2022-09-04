@@ -79,6 +79,9 @@ nav > a {
   font-weight: 700;
   text-decoration: none;
   color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 nav ul {
@@ -186,6 +189,8 @@ nav.visible .links i {
   font-size: 5.5rem;
   font-weight: 600;
   color: #fff;
+  line-height: 95%;
+  padding: 1.5rem 0;
 }
 
 #about .aboutflex {
@@ -491,6 +496,9 @@ footer ul a:hover {
 }
 
 @media (max-width: 900px) {
+  nav > a {
+    font-size: 2rem;
+  }
   nav ul:not(.links) {
     display: none;
   }
@@ -521,6 +529,7 @@ footer ul a:hover {
     padding: 0 1rem;
   }
   #home .intro {
+    padding-top: 9rem;
     max-width: 100%;
   }
   #home .intro h1 {
@@ -563,6 +572,9 @@ footer ul a:hover {
 }
 
 @media (max-width: 600px) {
+  nav > a {
+    font-size: 1.8rem;
+  }
   #testimonials .testimonialflex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
