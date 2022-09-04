@@ -5,7 +5,7 @@ const Home=()=>{
             <h3>
                Tasty and nutritious snacks for everyone
             </h3>
-            <h1>Prime SnackBar</h1>
+            <h1>Prime <br /> SnackBar</h1>
             <a href="#" className="click">Click Here</a>
         </div>
         <div className="homeimage">

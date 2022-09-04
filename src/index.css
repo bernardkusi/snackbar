@@ -32,7 +32,7 @@
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.38);
 }
 
-.center, .page {
+.center, .page, #contact .contactflex .form button, footer .copy {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -109,6 +109,7 @@ nav ul.links a i {
   color: #fff !important;
   -webkit-transition: all .4s;
   transition: all .4s;
+  font-size: 1.2rem;
 }
 
 nav ul.links a i:hover {
@@ -176,6 +177,9 @@ nav.visible .links i {
   font-size: 1.7rem;
   background: rgba(255, 255, 255, 0.448);
   padding: .3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #home .intro h1 {
@@ -198,9 +202,6 @@ nav.visible .links i {
 #about .aboutflex .aboutimage {
   height: 370px;
   width: 50%;
-}
-
-#about .aboutflex .aboutimage img {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
@@ -256,8 +257,17 @@ nav.visible .links i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1.5rem;
   margin-top: 3rem;
+}
+
+#services .serviceflex .service {
+  max-width: 200px;
 }
 
 #services .serviceflex .service i {
@@ -327,6 +337,71 @@ nav.visible .links i {
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
 }
 
+#contact {
+  padding-bottom: 7rem;
+}
+
+#contact .form, #contact .map {
+  width: 50%;
+}
+
+#contact .map {
+  background: lightgray;
+  min-height: 400px;
+}
+
+#contact .contactflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 3rem;
+  padding-top: 3rem;
+}
+
+#contact .contactflex .form {
+  padding: 1rem;
+}
+
+#contact .contactflex .form .label {
+  text-align: center;
+  font-weight: bold;
+  color: #FFAA01;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+#contact .contactflex .form label {
+  color: grey;
+}
+
+#contact .contactflex .form .formcontrol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+#contact .contactflex .form input, #contact .contactflex .form textarea {
+  outline: none;
+  border: 1px solid grey;
+  padding: .4rem;
+  border-radius: .4rem;
+  width: 100%;
+  margin-bottom: .7rem;
+  resize: none;
+}
+
+#contact .contactflex .form input:focus, #contact .contactflex .form textarea:focus {
+  border-color: #FFAA01;
+}
+
+#contact .contactflex .form input:focus + label, #contact .contactflex .form textarea:focus + label {
+  color: #FFAA01;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,6 +415,21 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+footer > a {
+  text-decoration: none;
+}
+
+footer > a h1 {
+  font-weight: 800;
+  color: #FFAA01;
+}
+
+footer .copy {
+  position: absolute;
+  bottom: 1rem;
 }
 
 footer p {
@@ -360,5 +450,131 @@ footer ul {
 footer ul a {
   padding: .3rem;
   text-decoration: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+footer ul a:hover {
+  color: #FFAA01;
+}
+
+@media (max-width: 1150px) {
+  #home .homeimage {
+    width: 50%;
+  }
+  #home .intro {
+    max-width: calc(50% - 5rem);
+  }
+  #home .intro h3 {
+    font-size: 1.5rem;
+    padding: .2rem;
+  }
+  #home .intro h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .menugrid {
+    -ms-grid-columns: (1fr)[3] !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer > * {
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  nav ul:not(.links) {
+    display: none;
+  }
+  nav ul.links i {
+    color: grey !important;
+  }
+  #testimonials .testimonialflex .testimonial {
+    width: 50%;
+  }
+  #testimonials .testimonialflex .testimonial:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .menugrid {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .menugrid .menu {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 330px;
+  }
+  #home {
+    padding: 0 1rem;
+  }
+  #home .intro {
+    max-width: 100%;
+  }
+  #home .intro h1 {
+    font-size: 2.9rem;
+  }
+  #home .homeimage {
+    width: 100%;
+    height: 250px;
+    top: auto;
+    bottom: 0 !important;
+  }
+  #home .homeimage .image {
+    max-width: 200px;
+    height: 100%;
+  }
+  .aboutflex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutflex > div {
+    width: 100% !important;
+  }
+  .aboutflex > div.aboutimage {
+    height: 370px !important;
+    width: 90% !important;
+    -webkit-transform: scale(0.8) !important;
+            transform: scale(0.8) !important;
+  }
+  .contactflex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactflex > div {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #testimonials .testimonialflex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #testimonials .testimonialflex .testimonial {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

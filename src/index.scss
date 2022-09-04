@@ -49,6 +49,7 @@ nav{
                 i{
                     color: #fff !important;
                     transition: all .4s;
+                    font-size: 1.2rem;
                     &:hover{
                         color: $secondary !important;
                     }
@@ -112,6 +113,7 @@ nav{
             font-size: 1.7rem;
             background: rgba(255, 255, 255, 0.448);
             padding: .3rem;
+            width: fit-content;
             // color: green;
         }
 
@@ -132,10 +134,8 @@ nav{
         .aboutimage{
             height: 370px;
             width: 50%;
+            transform: scale(.8);
 
-            img{
-                transform: scale(.8);
-            }
         }
 
         .abouttext{
@@ -191,10 +191,13 @@ nav{
 #services{
     .serviceflex{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1.5rem;
         margin-top: 3rem;
 
         .service{
+            max-width: 200px;
             i{
                 text-align: center;
                 font-size: 4rem;
@@ -257,6 +260,67 @@ nav{
     }
 }
 
+
+#contact{
+    padding-bottom: 7rem;
+
+    .form,.map{
+        width: 50%;
+    }
+    
+    .map{
+        background: lightgray;
+        min-height: 400px;
+    }
+
+    .contactflex{
+        display: flex;
+        gap: 0 3rem;
+        padding-top: 3rem;
+
+        .form{
+            .label{
+                text-align: center;
+                font-weight: bold;
+                color: $secondary;
+                font-size: 1.3rem;
+                padding-bottom: 1rem;
+            }
+            padding: 1rem;
+            label{
+                color: grey;
+            }
+
+            .formcontrol{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            input,textarea{
+                outline: none;
+                border: 1px solid grey;
+                padding: .4rem;
+                border-radius: .4rem;
+                width: 100%;
+                margin-bottom: .7rem;
+                resize: none;
+
+                &:focus{
+                    border-color: $secondary;
+
+                    &+label{
+                        color: $secondary
+                    }
+                }
+            }
+
+            button{
+                @extend .center;
+            }
+        }
+    }
+}
+
 footer{
     display: flex;
     gap: 2rem;
@@ -264,6 +328,22 @@ footer{
     background: #fff2d7;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+
+    &>a{
+        text-decoration: none;
+        
+        h1{
+            font-weight:800;
+            color: $secondary;
+        }
+    }
+
+    .copy{
+        @extend .center;
+        position: absolute;
+        bottom: 1rem;
+    }
 
     p{
         max-width: 600px;
@@ -277,6 +357,13 @@ footer{
         a{
             padding: .3rem;
             text-decoration: none;
+            transition: all .4s;
+
+            &:hover{
+                color: $secondary;
+            }
         }
     }
 }
+
+@import "media";

@@ -39,7 +39,7 @@ const Services = () => {
             </p>
           </div>
           <div className="service">
-          <i class="fa-duotone fa-truck"></i>
+          <i class="fa-sharp fa-solid fa-plate-utensils"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -3,6 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
+        <a href="/"><h1>SnackBar</h1></a>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint totam
         ducimus cum perspiciatis, pariatur tempora cupiditate rerum
@@ -25,6 +26,8 @@ const Footer = () => {
         <a href="#">Services</a>
         <a href="#">contact</a>
       </ul>
+
+      <p className="copy">copyright&copy;Bernard&nbsp;Dwumfour2022</p>
     </footer>
   );
 };
