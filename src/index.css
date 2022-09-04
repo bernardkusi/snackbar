@@ -133,6 +133,92 @@ nav.visible .links i {
   color: grey !important;
 }
 
+nav .bars {
+  width: 21px;
+  height: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  display: none;
+}
+
+nav .bars .bar {
+  width: 100%;
+  position: relative;
+  height: 3px;
+  background: #FFAA01;
+  border-radius: 1px;
+}
+
+nav .bars .bar::before, nav .bars .bar::after {
+  content: "";
+  background: #FFAA01;
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  height: 3px;
+  border-radius: 1px;
+}
+
+nav .bars .bar::after {
+  top: 15px !important;
+}
+
+.slider {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9;
+  display: none;
+}
+
+.slider ul {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.slider ul a {
+  display: inline-block;
+  padding: .7rem;
+  width: 100%;
+  margin: .2rem 0;
+  text-align: center;
+  color: grey;
+  text-decoration: none;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  font-weight: 600;
+}
+
+.slider ul a:hover {
+  color: #FFAA01;
+  background: #ffdd9a;
+}
+
+.slider.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 #home {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../public/pizza.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../public/pizza.jpg");
@@ -496,6 +582,10 @@ footer ul a:hover {
 }
 
 @media (max-width: 900px) {
+  nav {
+    height: 70px;
+    padding: .5rem 1rem;
+  }
   nav > a {
     font-size: 2rem;
   }
@@ -504,6 +594,10 @@ footer ul a:hover {
   }
   nav ul.links i {
     color: grey !important;
+  }
+  nav .bars {
+    display: block;
+    margin-right: .5rem;
   }
   #testimonials .testimonialflex .testimonial {
     width: 50%;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Nav = () => {
+const Nav = ({setnav}) => {
     const[state,setstate]=useState(false);
     document.addEventListener("scroll",()=>{
         if(window.scrollY>30){
@@ -26,6 +26,10 @@ const Nav = () => {
             <a href="#">Services</a>
             <a href="#">Testimonials</a>
         </ul>
+
+        <div className="bars" onClick={setnav}>
+            <div className="bar"></div>
+        </div>
     </nav>
   )
 }

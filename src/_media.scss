@@ -37,6 +37,8 @@
 
 @media (max-width:900px) {
     nav{
+        height: 70px;
+        padding: .5rem 1rem;
         &>a{
             font-size: 2rem;
         }
@@ -51,6 +53,11 @@
                     color: grey !important;
                 }
             }
+        }
+
+        .bars{
+            display: block;
+            margin-right: .5rem;
         }
     }
 
@@ -133,6 +140,8 @@
         &>a{
             font-size: 1.8rem;
         }
+
+
         }
 
     #testimonials{
