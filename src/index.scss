@@ -171,6 +171,37 @@ nav{
        .image{
         width: 90%;
         height: 500px;
+        position: relative;
+
+        .next,.prev{
+            position: absolute;
+            padding: .5rem 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffaa01b7;
+            border-radius: .3rem;
+            color: #fff;
+            font-weight: bold;
+            left: 0;
+        }
+        .name{
+            @extend .center;
+            position: absolute;
+            padding: .5rem 1rem;
+            background: #ffaa01b7;
+            border-radius: .3rem;
+            color: #fff;
+            font-weight: bold;
+            bottom: -2rem;
+        }
+
+        .next{
+            left: auto !important;
+            right: 0;
+        }
         
        }
     }

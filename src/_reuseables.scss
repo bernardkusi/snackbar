@@ -36,8 +36,11 @@ img{
     @extend .center;
     max-width: 1200px;
     padding: 7rem 1rem 4rem;
-    min-height: 100vh;
-
+    
+    &.main{
+        min-height: 100vh;
+    }
+    
     &>form{
         width: 430px;
         padding-bottom: 4rem;
@@ -67,11 +70,26 @@ img{
     height: calc(190px + 12vh);
     background: lightgrey;
     margin-bottom: 5rem;
+    position: relative;
+
+    &::before{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        background: rgba(0, 0, 0, 0.38);
+        // z-index: 1;
+    }
 
     h2{
-        text-align: center;
-        padding-top: 120px;
+        @extend .center;
+        position: absolute;
+        top: 120px;
         color: #fff;
+        font-size: 3rem;
+        font-weight: 800;
+        z-index: 1
+        ;
     }
 
 }

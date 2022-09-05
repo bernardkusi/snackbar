@@ -6,7 +6,7 @@ const Cartpage = ({setnavhidden}) => {
       
       }, [])
   return (
-    <div className="page">
+    <div className="page main">
         <h3 className="heading">Meals to order</h3>
     </div>
   )

@@ -11,6 +11,9 @@ const Home=()=>{
         <div className="homeimage">
             <div className="image">
             <img src="./bacd.png" alt="homeimage" />
+            <div className="next">&gt;</div>
+            <div className="prev">&lt;</div>
+            <div className="name">Burger $20</div>
             </div>
         </div>
         </div>

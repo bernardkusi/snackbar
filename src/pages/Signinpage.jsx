@@ -7,7 +7,7 @@ const Signinpage = ({setnavhidden}) => {
       
       }, [])
   return (
-    <div className="page  centered">
+    <div className="page centered main">
         <form action="">
         <div className="form"  data-aos="fade-right" data-aos-duration="600">
             <p className="label">Log in to my account</p>

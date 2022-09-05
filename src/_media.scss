@@ -110,8 +110,15 @@
             bottom: 0 !important;
 
             .image{
-                max-width: 200px;
-                height: 100%;
+                // max-width: 200px;
+                height: calc(100% - 4.5rem);
+
+                img{
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 57%;
+                }
             }
         }
 

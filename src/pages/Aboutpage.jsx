@@ -6,8 +6,9 @@ const Aboutpage = ({setnavhidden}) => {
       
       }, [])
   return (
-    <div className="page">
+    <div className="page main">
       <div className="banner">
+        <img src="./about1.jpg" alt="aboutimage" />
         <h2>Learn About Us Here</h2>
       </div>
       <h3 className="heading">Who we are</h3>

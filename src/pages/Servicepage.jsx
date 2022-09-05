@@ -6,7 +6,7 @@ const Servicepage = ({setnavhidden}) => {
       
       }, [])
   return (
-    <div className="page">
+    <div className="page main">
          <div className="banner">
             <h2>Our Services</h2>
         </div>

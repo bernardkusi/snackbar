@@ -8,8 +8,9 @@ const Menupage = ({setnavhidden}) => {
     }, [])
     
   return (
-    <div className='page'>
+    <div className='page main'>
          <div className="banner">
+            <img src="./menu.jpg" alt="menuimage" />
             <h2>Our Menu</h2>
         </div>
         <div id="menu">

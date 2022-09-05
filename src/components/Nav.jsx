@@ -15,9 +15,9 @@ const Nav = ({setnav,navhidden}) => {
         <Link to={"/"} className="logo">SnackBar</Link>
 
         <ul className='links'>
-        <Link to={"/cart"}> <i class="fa-sharp fa-solid fa-cart-shopping"></i></Link>
-        <Link to={"/signin"}> <i class="fa-sharp fa-solid fa-right-to-bracket"></i></Link>
-        <Link to={"/"}><i class="fa-solid fa-user"></i></Link>
+        <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i></Link>
+        <Link to={"/signin"}> <i className="fa-sharp fa-solid fa-right-to-bracket"></i></Link>
+        <Link to={"/"}><i className="fa-solid fa-user"></i></Link>
         </ul>
 
         <ul>
