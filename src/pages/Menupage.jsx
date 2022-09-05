@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import Menuitem from '../components/Menuitem'
 
-const Menupage = ({setnavhidden}) => {
+const Menupage = ({setnavhidden,closenav}) => {
     useEffect(() => {
       setnavhidden(true)
-    
+      closenav()   
     }, [])
     
   return (

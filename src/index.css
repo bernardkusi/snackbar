@@ -673,6 +673,9 @@ footer ul a:hover {
   footer > * {
     text-align: center;
   }
+  .page .banner h2 {
+    font-size: 2.3rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -767,6 +770,9 @@ footer ul a:hover {
   }
   .contactflex > div {
     width: 100% !important;
+  }
+  .page .banner h2 {
+    font-size: 1.6rem;
   }
 }
 

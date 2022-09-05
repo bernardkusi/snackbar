@@ -6,10 +6,10 @@ import Services from "../components/Services";
 import Menu from "../components/Menu";
 import Testimonials from "../components/Testimonials";
 
-const Homepage = ({setnavhidden}) => {
+const Homepage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(false)
-      
+        closenav()     
       }, [])
   return (
     <>

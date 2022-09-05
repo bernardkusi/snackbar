@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 
-const Cartpage = ({setnavhidden}) => {
+const Cartpage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(true)
-      
+        closenav()   
       }, [])
   return (
     <div className="page main">

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const Signinpage = ({setnavhidden}) => {
+const Signinpage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(true)
-      
+        closenav()
       }, [])
   return (
     <div className="page centered main">

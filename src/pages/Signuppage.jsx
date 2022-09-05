@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const Signuppage = ({setnavhidden}) => {
+const Signuppage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(true)
-      
+        closenav()
       }, [])
     
   return (

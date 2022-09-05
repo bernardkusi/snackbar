@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
-const Aboutpage = ({setnavhidden}) => {
+const Aboutpage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(true)
-      
+        closenav()   
       }, [])
   return (
     <div className="page main">

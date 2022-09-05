@@ -23,6 +23,10 @@ function App() {
     }
   }
 
+  const closenav=()=>{
+    setnavopen(false)
+  }
+
   const setnavstate=(value)=>{
     setnavhidden(value)
   }
@@ -32,13 +36,13 @@ function App() {
     <Nav navopen={navopen} setnav={setnav} navhidden={navhidden}/>
     <Slider navopen={navopen}/>
     <Routes>
-      <Route path="/" element={<Homepage setnavhidden={setnavstate}/>}/>
-      <Route path="/menu" element={<Menupage setnavhidden={setnavstate}/>}/>
-      <Route path="/about" element={<Aboutpage  setnavhidden={setnavstate}/>}/>
-      <Route path="/services" element={<Servicepage  setnavhidden={setnavstate}/>}/>
-      <Route path="/signin" element={<Signinpage  setnavhidden={setnavstate}/>}/>
-      <Route path="/signup" element={<Signuppage  setnavhidden={setnavstate}/>}/>
-      <Route path="/cart" element={<Cartpage  setnavhidden={setnavstate}/>}/>
+      <Route path="/" element={<Homepage setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/menu" element={<Menupage setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/about" element={<Aboutpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/services" element={<Servicepage  setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/signin" element={<Signinpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/signup" element={<Signuppage  setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/cart" element={<Cartpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
    
     </Routes>
    <Footer/>
