@@ -59,6 +59,13 @@
             display: block;
             margin-right: .5rem;
         }
+
+    }
+
+    .slider{
+        &.show{
+            display: flex !important;
+        }
     }
 
     #testimonials{

@@ -143,9 +143,6 @@ nav{
         }
     }
 
-    &.show{
-        display: flex !important;
-    }
 }
 
 #home{
@@ -346,6 +343,7 @@ nav{
     .map{
         background: lightgray;
         min-height: 400px;
+        position: relative;
     }
 
     .contactflex{
@@ -353,46 +351,6 @@ nav{
         gap: 0 3rem;
         padding-top: 3rem;
 
-        .form{
-            .label{
-                text-align: center;
-                font-weight: bold;
-                color: $secondary;
-                font-size: 1.3rem;
-                padding-bottom: 1rem;
-            }
-            padding: 1rem;
-            label{
-                color: grey;
-            }
-
-            .formcontrol{
-                display: flex;
-                flex-direction: column-reverse;
-            }
-
-            input,textarea{
-                outline: none;
-                border: 1px solid grey;
-                padding: .4rem;
-                border-radius: .4rem;
-                width: 100%;
-                margin-bottom: .7rem;
-                resize: none;
-
-                &:focus{
-                    border-color: $secondary;
-
-                    &+label{
-                        color: $secondary
-                    }
-                }
-            }
-
-            button{
-                @extend .center;
-            }
-        }
     }
 }
 

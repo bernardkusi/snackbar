@@ -36,6 +36,12 @@ img{
     @extend .center;
     max-width: 1200px;
     padding: 7rem 1rem 4rem;
+    min-height: 100vh;
+
+    &>form{
+        width: 430px;
+        padding-bottom: 4rem;
+    }
 
     .heading{
         text-align: center;
@@ -43,4 +49,80 @@ img{
         color: $secondary;
     }
 
+    .text{
+        color: grey;
+        padding: 1rem 0 4rem;
+    }
+
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
+    width: 100%;
+    height: calc(190px + 12vh);
+    background: lightgrey;
+    margin-bottom: 5rem;
+
+    h2{
+        text-align: center;
+        padding-top: 120px;
+        color: #fff;
+    }
+
+}
+
+.form{
+    .label{
+        text-align: center;
+        font-weight: bold;
+        color: $secondary;
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+    }
+    padding: 1rem;
+    label{
+        color: grey;
+    }
+
+    .formcontrol{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    input,textarea{
+        outline: none;
+        border: 1px solid grey;
+        padding: .4rem;
+        border-radius: .4rem;
+        width: 100%;
+        margin-bottom: .7rem;
+        resize: none;
+
+        &:focus{
+            border-color: $secondary;
+
+            &+label{
+                color: $secondary
+            }
+        }
+    }
+
+    .redirect{
+        color: grey;
+        font-size: .95rem;
+        padding: .7rem 0;
+
+        a{
+            color: $secondary;
+        }
+    }
+
+    button{
+        @extend .center;
+    }
 }

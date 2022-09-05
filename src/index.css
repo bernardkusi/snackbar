@@ -32,7 +32,7 @@
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.38);
 }
 
-.center, .page, #contact .contactflex .form button, footer .copy {
+.center, .page, .form button, footer .copy {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -49,11 +49,101 @@ img {
 .page {
   max-width: 1200px;
   padding: 7rem 1rem 4rem;
+  min-height: 100vh;
+}
+
+.page > form {
+  width: 430px;
+  padding-bottom: 4rem;
 }
 
 .page .heading {
   text-align: center;
   font-size: 1.75rem;
+  color: #FFAA01;
+}
+
+.page .text {
+  color: grey;
+  padding: 1rem 0 4rem;
+}
+
+.centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner {
+  width: 100%;
+  height: calc(190px + 12vh);
+  background: lightgrey;
+  margin-bottom: 5rem;
+}
+
+.banner h2 {
+  text-align: center;
+  padding-top: 120px;
+  color: #fff;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.form .label {
+  text-align: center;
+  font-weight: bold;
+  color: #FFAA01;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+.form label {
+  color: grey;
+}
+
+.form .formcontrol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.form input, .form textarea {
+  outline: none;
+  border: 1px solid grey;
+  padding: .4rem;
+  border-radius: .4rem;
+  width: 100%;
+  margin-bottom: .7rem;
+  resize: none;
+}
+
+.form input:focus, .form textarea:focus {
+  border-color: #FFAA01;
+}
+
+.form input:focus + label, .form textarea:focus + label {
+  color: #FFAA01;
+}
+
+.form .redirect {
+  color: grey;
+  font-size: .95rem;
+  padding: .7rem 0;
+}
+
+.form .redirect a {
   color: #FFAA01;
 }
 
@@ -211,12 +301,6 @@ nav .bars .bar::after {
 .slider ul a:hover {
   color: #FFAA01;
   background: #ffdd9a;
-}
-
-.slider.show {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
 }
 
 #home {
@@ -439,6 +523,7 @@ nav .bars .bar::after {
 #contact .map {
   background: lightgray;
   min-height: 400px;
+  position: relative;
 }
 
 #contact .contactflex {
@@ -447,50 +532,6 @@ nav .bars .bar::after {
   display: flex;
   gap: 0 3rem;
   padding-top: 3rem;
-}
-
-#contact .contactflex .form {
-  padding: 1rem;
-}
-
-#contact .contactflex .form .label {
-  text-align: center;
-  font-weight: bold;
-  color: #FFAA01;
-  font-size: 1.3rem;
-  padding-bottom: 1rem;
-}
-
-#contact .contactflex .form label {
-  color: grey;
-}
-
-#contact .contactflex .form .formcontrol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-#contact .contactflex .form input, #contact .contactflex .form textarea {
-  outline: none;
-  border: 1px solid grey;
-  padding: .4rem;
-  border-radius: .4rem;
-  width: 100%;
-  margin-bottom: .7rem;
-  resize: none;
-}
-
-#contact .contactflex .form input:focus, #contact .contactflex .form textarea:focus {
-  border-color: #FFAA01;
-}
-
-#contact .contactflex .form input:focus + label, #contact .contactflex .form textarea:focus + label {
-  color: #FFAA01;
 }
 
 footer {
@@ -598,6 +639,11 @@ footer ul a:hover {
   nav .bars {
     display: block;
     margin-right: .5rem;
+  }
+  .slider.show {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   #testimonials .testimonialflex .testimonial {
     width: 50%;

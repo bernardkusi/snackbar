@@ -1,4 +1,5 @@
 import React from 'react'
+import Menuitem from './Menuitem'
 
 const Menu = () => {
   return (
@@ -6,86 +7,14 @@ const Menu = () => {
         <div className="page">
             <h3 className="heading">Our Menu</h3>
             <div className="menugrid">
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
-                <div className="menu">
-                    <div className="image">
-                        <img src="./bacd.png" alt="image1" />
-                    </div>
-                    <div className="details">
-                        <p className="name">Burger</p>
-                        <p className="price">$32.00</p>
-                        <button className="click">Order now</button>
-                    </div>
-                </div>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
+            <Menuitem/>
             </div>
         </div>
     </div>
