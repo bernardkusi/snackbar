@@ -213,14 +213,50 @@ nav ul.links {
       align-self: center;
 }
 
-nav ul.links a i {
+nav ul.links a, nav ul.links button {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+nav ul.links a .dropdown, nav ul.links button .dropdown {
+  width: 11rem;
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  padding: .7rem;
+  background: rgba(255, 255, 255, 0.817);
+  border-radius: .2rem;
+  -webkit-box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+nav ul.links a .dropdown:hover, nav ul.links button .dropdown:hover {
+  display: block !important;
+}
+
+nav ul.links a .dropdown a, nav ul.links button .dropdown a {
+  font-size: .9rem !important;
+  font-weight: 300;
+  display: block;
+  width: 100%;
+  padding: .7rem 0;
+}
+
+nav ul.links a:is(.last):focus .dropdown, nav ul.links button:is(.last):focus .dropdown {
+  display: block;
+}
+
+nav ul.links a i, nav ul.links button i {
   color: #fff !important;
   -webkit-transition: all .4s;
   transition: all .4s;
   font-size: 1.2rem;
 }
 
-nav ul.links a i:hover {
+nav ul.links a i:hover, nav ul.links button i:hover {
   color: #FFAA01 !important;
 }
 
@@ -641,6 +677,49 @@ footer ul a {
 
 footer ul a:hover {
   color: #FFAA01;
+}
+
+.cart {
+  margin-top: 3rem;
+}
+
+.cart .cartitem {
+  margin-top: .5rem;
+  border: 1px solid lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .7rem;
+}
+
+.cart .cartitem .title {
+  color: grey;
+  font-weight: bolder;
+}
+
+.cart .cartitem .status {
+  color: #FFAA01;
+}
+
+.cart .cartitem .image {
+  width: 170px;
+  height: 170px;
+}
+
+.cart .cartitem .details {
+  justify-items: flex-start;
+}
+
+.cart .cartitem .details .itemname {
+  color: #FFAA01;
+  font-weight: bold;
 }
 
 @media (max-width: 1150px) {

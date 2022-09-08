@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 
-const Cartpage = ({setnavhidden,closenav}) => {
+const Orderspage = ({setnavhidden,closenav}) => {
     useEffect(() => {
         setnavhidden(true)
         closenav()   
       }, [])
   return (
     <div className="page main">
-        <h3 className="heading">Meals to order</h3>
+        <h3 className="heading">Order History</h3>
         <div className="cart">
-        <div className="cartitem">
+            <div className="cartitem">
                 <p className='title'>Meal name</p>
                 <p className='title'>Meal details</p>
-                <p className='title'>Remove meal</p>
+                <p className='title'>Date delivered</p>
             </div>
             <div className="cartitem">
                 <div className="image">
@@ -23,7 +23,10 @@ const Cartpage = ({setnavhidden,closenav}) => {
                     <p className="itemratin">rating</p>
                     <p className="itemprice">$45.00</p>
                 </div>
-                <div className="click">Delete</div>
+                 <div>
+                    <p className="date">24/03/22</p>
+                    <p className="status status">Delivered</p>
+                 </div>
             </div>
 
             
@@ -36,16 +39,10 @@ const Cartpage = ({setnavhidden,closenav}) => {
                     <p className="itemratin">rating</p>
                     <p className="itemprice">$45.00</p>
                 </div>
-                <div className="click">Delete</div>
-            </div>
-
-            <div className="cartitem">
-                <div className="details">
-                    <p >Items in cart : 5</p>
-                    <p>Delivery cost : $0.00</p>
-                    <p className="itemname">TOTAL : $499.00</p>
-                </div>
-                <div className="click">Order now</div>
+                <div>
+                    <p className="date">08/06/22</p>
+                    <p className="status status">Pending</p>
+                 </div>
             </div>
 
 
@@ -54,4 +51,4 @@ const Cartpage = ({setnavhidden,closenav}) => {
   )
 }
 
-export default Cartpage
+export default Orderspage

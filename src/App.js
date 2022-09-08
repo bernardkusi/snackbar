@@ -5,11 +5,13 @@ import Homepage from "./pages/Homepage";
 import Slider from "./components/Slider";
 import { useState } from "react";
 import Menupage from "./pages/Menupage";
+import Foodpage from "./pages/Foodpage";
 import Aboutpage from "./pages/Aboutpage";
 import Servicepage from "./pages/Servicepage";
 import Signinpage from "./pages/Signinpage";
 import Signuppage from "./pages/Signuppage";
 import Cartpage from "./pages/Cartpage";
+import Orderspage from "./pages/Orderspage";
 
 function App() {
   const[navopen,setnavopen]=useState(false);
@@ -38,11 +40,13 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/menu" element={<Menupage setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/menu/:id" element={<Foodpage setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/about" element={<Aboutpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/services" element={<Servicepage  setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/signin" element={<Signinpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/signup" element={<Signuppage  setnavhidden={setnavstate} closenav={closenav}/>}/>
       <Route path="/cart" element={<Cartpage  setnavhidden={setnavstate} closenav={closenav}/>}/>
+      <Route path="/orders" element={<Orderspage  setnavhidden={setnavstate} closenav={closenav}/>}/>
    
     </Routes>
    <Footer/>

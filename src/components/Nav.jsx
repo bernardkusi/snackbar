@@ -17,7 +17,13 @@ const Nav = ({setnav,navhidden}) => {
         <ul className='links'>
         <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i></Link>
         <Link to={"/signin"}> <i className="fa-sharp fa-solid fa-right-to-bracket"></i></Link>
-        <Link to={"/"}><i className="fa-solid fa-user"></i></Link>
+        <button className="last"><i className="fa-solid fa-user">
+            <div className="dropdown">
+            <Link to={"/"}>My Account</Link>
+            <Link to={"/orders"}>Orders</Link>
+            </div>
+            </i>
+            </button>
         </ul>
 
         <ul>

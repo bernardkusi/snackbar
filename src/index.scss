@@ -45,8 +45,52 @@ nav{
 
         &.links{
             align-self: center;
+            
 
-            a{
+            a,button{
+                position: relative;
+                border: none;
+                outline: none;
+                background: transparent;
+                
+
+                .dropdown{
+                    width: 11rem;
+                    position: absolute;
+                    top: 3.5rem;
+                    right: 0;
+                    padding: .7rem ;
+                    background: rgba(255, 255, 255, 0.817);
+                    border-radius: .2rem;
+                    box-shadow: 0 0 .3rem rgba(0,0,0, .2);
+                    display: none;
+                    &:hover{
+                        display: block !important;
+                    }
+    
+                    a{
+                        font-size: .9rem !important;
+                        font-weight: 300;
+                        display: block;
+                        width: 100%;
+                        padding: .7rem 0;
+
+                        
+                    }
+                }
+
+                &:is(.last){
+                    
+                    &:focus{
+                        .dropdown{
+                            display: block;
+                            
+                            // background: red;
+                        }
+                    }
+                   
+                }
+
                 i{
                     color: #fff !important;
                     transition: all .4s;
@@ -425,6 +469,45 @@ footer{
 
             &:hover{
                 color: $secondary;
+            }
+        }
+    }
+}
+
+.cart{
+    margin-top: 3rem;
+    .cartitem{margin-top: .5rem;
+
+        // height: 180px;
+        // background: red;
+        border: 1px solid lightgray;
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: center;
+        padding: .7rem;
+
+        .title{
+            color: grey;
+            font-weight: bolder;
+        }
+
+        .status{
+            color: $secondary;
+        }
+
+        .image{
+            width: 170px;
+            height: 170px;
+            
+        }
+
+        .details{
+            justify-items: flex-start;
+
+            .itemname{
+                color: $secondary;
+                font-weight: bold;
             }
         }
     }
