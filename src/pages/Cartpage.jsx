@@ -1,10 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 
-const Cartpage = ({setnavhidden,closenav}) => {
+const Cartpage = ({setnavhidden,closenav,cart,removefromcart}) => {
     useEffect(() => {
         setnavhidden(true)
         closenav()   
       }, [])
+
+      let count=cart.length
+      let total = 0
+      cart.forEach(element => {
+        total+=Number(element.price)
+      });
+    
+
+
   return (
     <div className="page main">
         <h3 className="heading">Meals to order</h3>
@@ -14,36 +23,24 @@ const Cartpage = ({setnavhidden,closenav}) => {
                 <p className='title'>Meal details</p>
                 <p className='title'>Remove meal</p>
             </div>
-            <div className="cartitem">
+           {cart.map(meal=>{return ( <div className="cartitem" key={meal.id}>
                 <div className="image">
-                    <img src="./bacd.png" alt="cartitem" />
+                    <img src={require(`../images/${meal.image}.jpg`)} alt={meal.name} />
                 </div>
                 <div className="details">
-                    <p className="itemname">Burger</p>
+                    <p className="itemname">{meal.name}</p>
                     <p className="itemratin">rating</p>
-                    <p className="itemprice">$45.00</p>
+                    <p className="itemprice">${meal.price}</p>
                 </div>
-                <div className="click">Delete</div>
+                <div className="click" onClick={()=>{removefromcart(meal)}}>Delete</div>
             </div>
-
-            
-            <div className="cartitem">
-                <div className="image">
-                    <img src="./bacd.png" alt="cartitem" />
-                </div>
-                <div className="details">
-                    <p className="itemname">Burger</p>
-                    <p className="itemratin">rating</p>
-                    <p className="itemprice">$45.00</p>
-                </div>
-                <div className="click">Delete</div>
-            </div>
+)} )}
 
             <div className="cartitem">
                 <div className="details">
-                    <p >Items in cart : 5</p>
+                    <p >Items in cart : {count}</p>
                     <p>Delivery cost : $0.00</p>
-                    <p className="itemname">TOTAL : $499.00</p>
+                    <p className="itemname">TOTAL : ${total}</p>
                 </div>
                 <div className="click">Order now</div>
             </div>

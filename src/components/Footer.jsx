@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-        <a href="/"><h1>SnackBar</h1></a>
+        <a href="/"><img src="./logo.png" alt="logo" /></a>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint totam
         ducimus cum perspiciatis, pariatur tempora cupiditate rerum

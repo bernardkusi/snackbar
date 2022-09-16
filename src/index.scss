@@ -27,6 +27,8 @@ nav{
         text-decoration: none;
         color:#fff;
         align-self: center;
+
+        width: 140px;
     }
 
     ul{
@@ -45,7 +47,14 @@ nav{
 
         &.links{
             align-self: center;
-            
+
+            sup{
+                padding: .2rem .42rem;
+                background: $secondary;
+                color: #fff;
+                border-radius: 50%;
+                font-size: .85rem;
+            }            
 
             a,button{
                 position: relative;
@@ -262,13 +271,12 @@ nav{
             // color: green;
         }
 
-        h1{
-            font-size: 5.5rem;
-            font-weight: 600;
-            color: #fff;
-            line-height:95%;
-            padding: 1.5rem 0;
-        }
+        img{
+            display: block;
+            width: 400px;
+            margin: 1.5rem 0;
+           }
+    
     }
 }
 
@@ -313,9 +321,9 @@ nav{
             // background: red;
             .image{
                 width: 100%;
+                // border: 1px solid $secondary;
                 height: 10rem;
-                background: radial-gradient(lighten($secondary,35),$secondary) ;
-            }
+             }
 
             .details{
                 .name{
@@ -440,6 +448,7 @@ footer{
 
     &>a{
         text-decoration: none;
+        width: 180px;
         
         h1{
             font-weight:800;
@@ -509,6 +518,34 @@ footer{
                 color: $secondary;
                 font-weight: bold;
             }
+        }
+    }
+}
+
+.food{
+    // background: red;
+    display: flex; 
+    align-items: center;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+
+    .image{
+        width: 100%;
+        max-width: 400px;
+        height: 380px;
+        // background: red;
+
+    }
+
+    .fooddetails{
+        .foodname{
+            color: $secondary;
+        }
+
+        .foodprice{
+            color: grey;
+            padding: .5rem 0;
         }
     }
 }

@@ -1,11 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import Menuitem from '../components/Menuitem'
+import { meals } from '../meals'
 
-const Menupage = ({setnavhidden,closenav}) => {
+const Menupage = ({setnavhidden,closenav,addtocart}) => {
     useEffect(() => {
       setnavhidden(true)
       closenav()   
     }, [])
+
+    const[items,setitems]=useState("");
+    useEffect(
+     ()=>{
+      // fetch("http://localhost:3000/meals")
+      // .then(res=>res.json())
+      // .then(data=>setitems(data))
+      setitems(meals)
+     },
+      []
+    )
     
   return (
     <div className='page main'>
@@ -15,14 +27,7 @@ const Menupage = ({setnavhidden,closenav}) => {
         </div>
         <div id="menu">
             <div className="menugrid">
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
-            <Menuitem/>
+            {items && items.map(item=>{return <Menuitem meal={item} key={item.id} addtocart={addtocart}/>})}
             </div>
         </div>
     </div>

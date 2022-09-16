@@ -13,8 +13,8 @@
                 // color: green;
             }
     
-            h1{
-                font-size: 4.5rem;
+            img{
+                width: 320px;
             }
         }
     }    
@@ -107,8 +107,8 @@
         .intro{
             padding-top:9rem ;
             max-width: 100%;
-            h1{
-                font-size: 2.9rem;
+            img{
+                width: 280px;
             }
         }
         .homeimage{
@@ -145,8 +145,15 @@
                 transform: scale(.8) !important;
             }
         }
-    }
 
+    }
+    
+    .food{
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding: .5rem;
+    }
+    
     .contactflex{
         flex-direction: column;
 

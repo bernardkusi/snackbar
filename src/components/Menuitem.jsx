@@ -1,16 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const Menuitem = () => {
+const Menuitem = ({meal,addtocart}) => {
   return (
     <div className="menu">
     <div className="image">
-        <img src="bacd.png" alt="image1" />
+        <img src={require(`../images/${meal.image}.jpg`)} alt={meal.name}/>
     </div>
     <div className="details">
-        <Link to="/menu/1"  className="name">Burger</Link>
-        <p className="price">$32.00</p>
-        <button className="click">Order now</button>
+        <Link to={`/menu/${meal.id}`}  className="name">{meal.name}</Link>
+        <p className="price">${meal.price}</p>
+        <button className="click" onClick={()=>{addtocart(meal)}}>Order now</button>
     </div>
 </div>
   )

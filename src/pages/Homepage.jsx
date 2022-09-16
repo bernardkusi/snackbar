@@ -6,7 +6,7 @@ import Services from "../components/Services";
 import Menu from "../components/Menu";
 import Testimonials from "../components/Testimonials";
 
-const Homepage = ({setnavhidden,closenav}) => {
+const Homepage = ({setnavhidden,closenav,addtocart}) => {
     useEffect(() => {
         setnavhidden(false)
         closenav()     
@@ -15,7 +15,7 @@ const Homepage = ({setnavhidden,closenav}) => {
     <>
     <Home/>
    <About/>
-   <Menu/>
+   <Menu addtocart={addtocart}/>
    <Services/>
    <Testimonials/>
    <Contact/>  

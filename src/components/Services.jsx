@@ -7,7 +7,7 @@ const Services = () => {
         <h3 className="heading">Our Services</h3>
         <div className="serviceflex">
           <div className="service">
-          <i class="fa-solid fa-book-open"></i>
+          <i className="fa-solid fa-book-open"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -15,7 +15,7 @@ const Services = () => {
             </p>
           </div>
           <div className="service">
-          <i class="fa-solid fa-person-carry-box"></i>
+          <i className="fa-solid fa-person-carry-box"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -23,7 +23,7 @@ const Services = () => {
             </p>
           </div>
           <div className="service">
-          <i class="fa-sharp fa-solid fa-location-dot"></i>
+          <i className="fa-sharp fa-solid fa-location-dot"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,7 +31,7 @@ const Services = () => {
             </p>
           </div>
           <div className="service">
-          <i class="fa-solid fa-money-bill-wave"></i>
+          <i className="fa-solid fa-money-bill-wave"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -39,7 +39,7 @@ const Services = () => {
             </p>
           </div>
           <div className="service">
-          <i class="fa-sharp fa-solid fa-plate-utensils"></i>
+          <i className="fa-sharp fa-solid fa-plate-utensils"></i>
             <p className="servicename">Healthy meal</p>
             <p className="servicedetails">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

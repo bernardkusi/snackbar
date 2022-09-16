@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
-const Nav = ({setnav,navhidden}) => {
+const Nav = ({setnav,navhidden,cart}) => {
     const[state,setstate]=useState(false);
     document.addEventListener("scroll",()=>{
         if(window.scrollY>30){
             setstate(true);
-            console.log(navhidden)
         }else{
             setstate(false);
         }
     })
   return (
     <nav className={[state || navhidden?"visible":""]}>
-        <Link to={"/"} className="logo">SnackBar</Link>
+        <Link to={"/"} className="logo"><img src="./logo.png" alt="logo" /></Link>
 
         <ul className='links'>
-        <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i></Link>
+        <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i><sup>{cart.length}</sup></Link>
         <Link to={"/signin"}> <i className="fa-sharp fa-solid fa-right-to-bracket"></i></Link>
         <button className="last"><i className="fa-solid fa-user">
             <div className="dropdown">
