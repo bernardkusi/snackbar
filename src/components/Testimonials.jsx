@@ -12,7 +12,7 @@ const Testimonials = () => {
                 <span className="image">
                   <img src="./person1.jpg" alt="testimage" />
                 </span>
-                  <p className="name">Bernard Kusi</p>
+                  <p className="name">Jennifer Efya</p>
               </div>
               <p className="comment">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
@@ -38,7 +38,7 @@ const Testimonials = () => {
                 <span className="image">
                   <img src="./person3.jpg" alt="testimage" />
                 </span>
-                  <p className="name">Bernard Kusi</p>
+                  <p className="name">Mary Owusu</p>
               </div>
               <p className="comment">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde

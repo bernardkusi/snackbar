@@ -12,6 +12,7 @@ import Signinpage from "./pages/Signinpage";
 import Signuppage from "./pages/Signuppage";
 import Cartpage from "./pages/Cartpage";
 import Orderspage from "./pages/Orderspage";
+import Message from "./components/Message";
 
 function App() {
   const[navopen,setnavopen]=useState(false);
@@ -34,32 +35,41 @@ function App() {
   }
 
   const[cart,setcart]=useState([])
+  const [message,setmessage]=useState(null)
   // useEffect(()=>{
   //   // let storedcart=localStorage.getObj("cart")
   //   if(storedcart){
   //     setcart(storedcart)
   //   }
   // },[])
+  const messageset=(message)=>{
+    setmessage(message)
+    setTimeout(() => {
+      setmessage(null)
+    }, 2000);
+  }
 
   const addtocart=(meal)=>{
     let item=cart.includes(meal)
     if(item){
-      console.log("Product already in cart")
+      messageset("Product already in cart")
     }else{
       setcart([...cart,meal])
-      //  localStorage.setObj("cart",cart)
+      messageset(meal.name+" added to cart")
     }
       console.log(cart)
   }
 
   const removefromcart=(meal)=>{
     setcart(cart.filter(element=>element!==meal))
+    messageset(meal.name+" removed to cart")
   }
 
   return (
    <>
     <Nav navopen={navopen} setnav={setnav} navhidden={navhidden} cart={cart}/>
     <Slider navopen={navopen}/>
+    {message && <Message message={message}/>}
     <Routes>
       <Route path="/" element={<Homepage setnavhidden={setnavstate} closenav={closenav} addtocart={addtocart}/>}/>
       <Route path="/menu" element={<Menupage setnavhidden={setnavstate} closenav={closenav}  addtocart={addtocart}/>}/>

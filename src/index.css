@@ -164,6 +164,23 @@ img {
   color: #FFAA01;
 }
 
+.message {
+  position: fixed;
+  top: 6rem;
+  width: 95%;
+  max-width: 1000px;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: .6rem .8rem;
+  background: #ffaa01da;
+  z-index: 3;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #fff;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,7 +735,7 @@ footer ul a:hover {
 }
 
 .cart .cartitem .image {
-  width: 170px;
+  width: 220px;
   height: 170px;
 }
 
@@ -919,6 +936,44 @@ footer ul a:hover {
   #testimonials .testimonialflex .testimonial {
     width: 100%;
     margin-bottom: 1.5rem;
+  }
+  .cart {
+    margin-top: 3rem;
+  }
+  .cart .cartitem {
+    margin-top: .5rem;
+    gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: .3rem;
+  }
+  .cart .cartitem .title {
+    font-size: .9rem;
+  }
+  .cart .cartitem .status {
+    color: #FFAA01;
+  }
+  .cart .cartitem .image {
+    width: 130px;
+    height: 100px;
+  }
+  .cart .cartitem .details {
+    justify-items: flex-start;
+  }
+  .cart .cartitem .details p {
+    font-size: .85rem;
+  }
+  .cart .cartitem .details .itemname {
+    color: #FFAA01;
+    font-weight: bold;
+    font-size: .9rem !important;
+  }
+  .cart .cartitem .click {
+    font-size: .8rem;
+  }
+  #services .serviceflex .service {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=index.css.map */

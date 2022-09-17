@@ -192,4 +192,54 @@
             }
         }
     }
+
+    .cart{
+        margin-top: 3rem;
+        .cartitem{
+            margin-top: .5rem;
+            gap: 1rem;
+            align-items: center;
+            padding: .3rem;
+    
+            .title{
+                font-size: .9rem;
+            }
+    
+            .status{
+                color: $secondary;
+            }
+    
+            .image{
+                width: 130px;
+                height: 100px;
+                
+            }
+    
+            .details{
+                justify-items: flex-start;
+
+                p{
+                    font-size: .85rem;
+                }
+    
+                .itemname{
+                    color: $secondary;
+                    font-weight: bold;
+                    font-size: .9rem !important;
+                }
+            }
+
+            .click{
+                font-size: .8rem;
+            }
+        }
+    }
+
+    #services{
+        .serviceflex{
+            .service{
+                text-align: center;
+            }
+        }
+    }
 }
