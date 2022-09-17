@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Snack-bar",
+  "name": "Snack-bar app",
   "icons": [
     {
       "src": "maskable_icon.png",
@@ -26,6 +26,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffff",
   "background_color": "#ffffff"
 }
