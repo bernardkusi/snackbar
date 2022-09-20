@@ -15,8 +15,27 @@ import Orderspage from "./pages/Orderspage";
 import Message from "./components/Message";
 
 function App() {
+  const[cart,setcart]=useState([])
+  const [message,setmessage]=useState(null)
   const[navopen,setnavopen]=useState(false);
   const[navhidden,setnavhidden]=useState(true);
+
+  let savedcart=localStorage.getItem("snackbarcart")
+  useEffect(() => {
+    if(savedcart){
+      setcart(JSON.parse(savedcart))
+      console.log("Cart Exists")
+    }
+    }
+  , [])
+
+  useEffect(() => {
+    localStorage.setItem("snackbarcart",JSON.stringify(cart))
+  }, [cart])
+  
+
+  
+
 
   const setnav=()=>{
     if(navopen){
@@ -33,15 +52,7 @@ function App() {
   const setnavstate=(value)=>{
     setnavhidden(value)
   }
-
-  const[cart,setcart]=useState([])
-  const [message,setmessage]=useState(null)
-  // useEffect(()=>{
-  //   // let storedcart=localStorage.getObj("cart")
-  //   if(storedcart){
-  //     setcart(storedcart)
-  //   }
-  // },[])
+ 
   const messageset=(message)=>{
     setmessage(message)
     setTimeout(() => {
@@ -56,13 +67,18 @@ function App() {
     }else{
       setcart([...cart,meal])
       messageset(meal.name+" added to cart")
+      console.log("cart",cart)
+      // localStorage.setItem("snackbarcart",JSON.stringify(cart))
+      console.log("local",localStorage.getItem("snackbarcart"))
     }
-      console.log(cart)
+
   }
 
   const removefromcart=(meal)=>{
     setcart(cart.filter(element=>element!==meal))
     messageset(meal.name+" removed to cart")
+    // localStorage.setItem("snackbarcart",JSON.stringify(cart))
+
   }
 
   return (
