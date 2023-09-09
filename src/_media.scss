@@ -133,7 +133,7 @@
     }
 
     .aboutflex{
-        flex-direction: column;
+        flex-direction: column !important;
 
         &>div{
             width: 100% !important;

@@ -4,7 +4,6 @@ const About = () => {
   return (
     <div id="about">
      <div className="page">
-    <h3 className="heading">About Us</h3>
   <div className="aboutflex">
 
   <div className="aboutimage">
@@ -12,6 +11,7 @@ const About = () => {
       </div>
 
   <div className="abouttext">
+    <h3 className="heading" style={{textAlign:"left"}}>About Us</h3>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus iure
         provident itaque reprehenderit nisi. Velit similique nulla est sunt
         fugit tempora commodi sed deleniti iusto, eos id quisquam laudantium

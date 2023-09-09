@@ -11,10 +11,10 @@ const Nav = ({setnav,navhidden,cart}) => {
     })
   return (
     <nav className={[state || navhidden?"visible":""]}>
-        <Link to={"/"} className="logo"><img src="./logo.png" alt="logo" /></Link>
+        <Link to={"/"} className="logo"><img src="./logo2.png" alt="logo" /></Link>
 
         <ul className='links'>
-        <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i><sup>{cart.length}</sup></Link>
+        <Link to={"/cart"}> <i className="fa-sharp fa-solid fa-cart-shopping"></i><sup style={{fontSize:".5rem"}}>{cart.length}</sup></Link>
         <Link to={"/signin"}> <i className="fa-sharp fa-solid fa-right-to-bracket"></i></Link>
         <button className="last"><i className="fa-solid fa-user">
             <div className="dropdown">
